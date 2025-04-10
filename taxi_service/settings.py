@@ -38,6 +38,8 @@ INTERNAL_IPS = [
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
+    "crispy_bootstrap4",
+    "crispy_forms",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
