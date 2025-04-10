@@ -39,13 +39,12 @@ INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "crispy_bootstrap4",
-    "crispy_forms",
+    "crispy_forms",  # ← залишаємо лише один раз
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "debug_toolbar",
-    "crispy_forms",
     "taxi",
 ]
 

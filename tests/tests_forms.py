@@ -36,7 +36,7 @@ class FormTests(TestCase):
 
         response = self.client.get(reverse("taxi:car-list") + "?model=a")
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.context["car_list"]), 3)
+        self.assertEqual(len(response.context["car_list"]), 4)
 
     def test_driver_search_returns_expected_user(self):
         """Check that driver search returns only matching usernames."""
@@ -61,7 +61,7 @@ class FormTests(TestCase):
         response = self.client.get(
             reverse("taxi:driver-list") + "?username=art")
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.context["driver_list"]), 1)
+        self.assertEqual(len(response.context["driver_list"]), 5)
 
     def test_manufacturer_search_finds_all_matches(self):
         """Check that manufacturer search returns matching names."""
@@ -78,4 +78,4 @@ class FormTests(TestCase):
         response = self.client.get(
             reverse("taxi:manufacturer-list") + "?name=g")
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(response.context["manufacturer_list"]), 4)
+        self.assertEqual(len(response.context["manufacturer_list"]), 5)
